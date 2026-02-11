@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:macro name="qualisys_sensor">
+    <ros2_control name="qualisys_sensor" type="sensor">
+      <hardware>
+            <plugin>qualisys_ros2_control_hw/QualisysSensor</plugin>
+            <param name="host_name">10.62.9.135</param>
+            <param name="host_port">22222</param>
+     </hardware>
+
+    <!-- Pose sensor -->
+    <sensor name="camera">
+        <state_interface name="position.x"/>
+        <state_interface name="position.y"/>
+        <state_interface name="position.z"/>
+        <state_interface name="orientation.x"/>
+        <state_interface name="orientation.y"/>
+        <state_interface name="orientation.z"/>
+        <state_interface name="orientation.w"/>
+        <param name="label">camera</param>
+    </sensor>
+    
+  </ros2_control>
+</xacro:macro>
+
+</robot>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<library path="libqualisys_ros2_control_hw">
+  <class
+    name="qualisys_ros2_control_hw/QualisysSensor"
+    type="qualisys_ros2_control_hw::QualisysSensor"
+    base_class_type="hardware_interface::SensorInterface">
+
+    <description>
+      ros2_control SensorInterface for the Qualisys motion capture system.
+      Each Qualisys rigid body is exposed as a pose sensor.
+    </description>
+
+  </class>
+</library>

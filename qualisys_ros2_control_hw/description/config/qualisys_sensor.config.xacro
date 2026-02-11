@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="qualisys_sensor">
+
+    <link name="world"/>
+    <link name="camera"/>
+    
+    <joint name="world_to_camera" type="fixed">
+        <parent link="world"/>
+        <child link="camera"/>
+    </joint>
+
+    <xacro:include filename="$(find qualisys_ros2_control_hw)/ros2_control/qualisys_sensor.ros2_control.xacro" />
+    
+    <xacro:qualisys_sensor/>
+</robot>

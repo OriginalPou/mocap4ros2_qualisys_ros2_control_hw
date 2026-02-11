@@ -1,0 +1,16 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 200  # Hz
+    thread_priority: 90
+
+    pose_broadcaster:
+      type: pose_broadcaster_mod/PoseBroadcasterMod
+
+pose_broadcaster:
+  ros__parameters:
+    frame_id: "camera"
+    pose_name: "camera"
+    tf.enable: false
+    sensor_to_control_freq_ratio: 8
+    gpio_name: "null"
+
